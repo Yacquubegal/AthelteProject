@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         dataType   : "json",
         success: function (result) {
             console.log(result);
-            document.location.href = "index.html#ListAll";  // go back to movie list 
+            document.location.href = "index.html#Listplayers";  // go back to movie list 
           }
         });
 
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // next 2 functions ( createList and createListSubset ) could be combined into 1 with a little work
-// such as I could pass in a variable which said which divMovieList div it should draw
+// such as I could pass in a variable which said which divPlayerList div it should draw
 function createList() {
    // clear prior data
    console.log("clearing li's");
@@ -137,7 +137,7 @@ function createList() {
                 // use the html5 "data-parm" to encode the ID of this particular data object
                 // that we are building an li from
                 li.setAttribute("data-parm", element.ID);
-                li.innerHTML = element.ID + ":  " + element.Title + "  " + element.Genre;
+                li.innerHTML = element.Data + ":  " + element.Title;
                 ul.appendChild(li);
             }
         });
